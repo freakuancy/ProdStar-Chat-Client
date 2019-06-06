@@ -1,0 +1,36 @@
+Unattended Update Script Language
+
+Types:
+STRING
+BOOLEAN
+
+PRECENDENCE:
+= LEFT, RIGHT
+<> LEFT, RIGHT
+
+
+Contants:
+${PRODDIR} Prodigy Installation Directory
+${TEMPDIR} Temporar Files Directory
+${CURRENTVER} Current ProdStar Version
+${NEWVER} New ProdStar Version
+${WINDOWSVER} Windows Version
+
+
+Methods:
+VAR ARBITRARY = VALUE
+MOVE File1, File2, CLEAN as Boolean
+COPY File1, File2, OVERWRITE as Boolean
+DELETE File1
+MSGBOX MessageString
+WRITEREGISTRYVAL RegistryKey, Value
+
+
+Functions:
+QUERYBOX MessageString RETURNS BOOLEAN
+DIRECTORYBOX MessageString RETURNS STRING
+GETREGISTRYVAL RegistryKey RETURNS STRING
+
+
+LOGIC:
+IF Compare1 COMPARATOR[=, <>] Compare2
